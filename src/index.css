@@ -1,0 +1,28 @@
+:root {
+    --color-dark: #21222D;
+    --color-dark-gray: #2C2C37;
+    --color-gray: #747587;
+    --color-error: #DE4154;
+    --color-white: #FFFFFF;
+    --color-green: #4B8261;
+    --color-blue: #188BF5;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-dark);
+
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}

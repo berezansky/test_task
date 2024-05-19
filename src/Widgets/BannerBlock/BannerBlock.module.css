@@ -1,0 +1,10 @@
+.bannerWrapper {
+    padding: 85px 95px;
+    background-color: var(--color-dark-gray);
+}
+
+@media screen and (max-width: 1439px) {
+    .bannerWrapper {
+        display: none;
+    }
+}
