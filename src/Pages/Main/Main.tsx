@@ -6,9 +6,11 @@ import styles from './Main.module.css';
 export const MainPage = (): React.JSX.Element => {
 
     return (
-        <div className={styles.wrapper}>
-            <OurVideos />
-            <BannerBlock />
+        <div className={styles.container}>
+            <div className={styles.wrapper}>
+                <OurVideos />
+                <BannerBlock />
+            </div>
         </div>
     );
 }

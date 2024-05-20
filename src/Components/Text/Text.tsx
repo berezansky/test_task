@@ -6,9 +6,10 @@ interface TextProps {
     tag: string;
     text: string;
     type: string;
+    className?: string;
 }
 
-export const Text: FC<TextProps> = ({ tag, text, type }): React.JSX.Element => {
-    return React.createElement(tag, { className: styles[type] }, text)   
+export const Text: FC<TextProps> = ({ tag, text, type, className }): React.JSX.Element => {
+    return React.createElement(tag, { className: `${styles[type]}${className ? ` ${className}` : ''}` }, text)   
 }
     

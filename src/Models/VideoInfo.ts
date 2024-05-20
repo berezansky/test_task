@@ -1,7 +1,7 @@
 export interface VideoInfo {
     genre: string[];
     id: number;
-    image: string;
+    image?: string;
     labels: {
         fullhd?: boolean;
         subtitles?: boolean;

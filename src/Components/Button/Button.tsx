@@ -19,11 +19,11 @@ export const Button: FC<ButtonProps> = (props): React.JSX.Element => {
 
     return (
         <button
-            className={`${styles.button}${className ? className : ''}`}
+            className={`${styles.button}${className ? ` ${className}` : ''}`}
             style={{ backgroundColor: color }}
             onClick={onClick}>
             {text && <Text tag='p' type={textType} text={text} />}
-            {description && <Text tag='p' type={TextType.BUTTON_DESCRIPTION} text={description} />}
+            {description && <Text tag='span' type={TextType.BUTTON_DESCRIPTION} text={description} />}
         </button>
     )
 }

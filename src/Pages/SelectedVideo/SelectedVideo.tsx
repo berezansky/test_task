@@ -7,9 +7,10 @@ import { BannerBlock, Comment, VideoWithName } from '@/Widgets';
 import { apiService } from '@/Services';
 
 import styles from './SelectedVideo.module.css';
+import { VideoInfo } from '@/Models';
 
 export const SelectedVideoPage = (): React.JSX.Element => {
-    const [video, setVideo] = useState()
+    const [video, setVideo] = useState<VideoInfo | null>(null)
     const [comments, setComments] = useState([])
 
     const { id } = useParams()
@@ -21,13 +22,11 @@ export const SelectedVideoPage = (): React.JSX.Element => {
         }
     }, [])
 
-    console.log(video, comments)
-
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.container}>
             <div>
-                <Text tag="h1" text="Выбранное видео" type={TextType.TITLE} />
-                <VideoWithName />
+                <Text tag="h1" text="Выбранное видео" type={TextType.TITLE} className={styles.title} />
+                <VideoWithName video={video} />
                 {comments.map(comment => (
                     <Comment />
                 ))}

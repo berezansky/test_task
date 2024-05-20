@@ -1,6 +1,7 @@
 .bannerWrapper {
     padding: 85px 95px;
     background-color: var(--color-dark-gray);
+    margin-top: 160px;
 }
 
 @media screen and (max-width: 1439px) {

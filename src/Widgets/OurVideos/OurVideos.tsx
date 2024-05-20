@@ -15,7 +15,7 @@ export const OurVideos = (): React.JSX.Element | null => {
 
     useEffect(() => {
         apiService.getAllVideos().then(allVideos => {
-            setVideos(allVideos);
+            allVideos?.length > 0 && setVideos(allVideos);
         });
     }, [])
 
@@ -24,9 +24,15 @@ export const OurVideos = (): React.JSX.Element | null => {
     }
 
     return (
-        <div className={styles.ourVideosWrapper}>
-            <Text tag="h1" type={TextType.TITLE} text="Наши видео" />
-            <Slider items={chunk(videos, 6)} />
+        <div>
+            <Text 
+                tag="h1" 
+                type={TextType.TITLE} 
+                className={styles.title} 
+                text="Наши видео" />
+            <div className={styles.ourVideosWrapper}>
+                <Slider items={chunk(videos, 6)} />
+            </div>
         </div>
     )
 }
