@@ -34,3 +34,9 @@
     line-height: 28px;
     color: var(--color-white);
 }
+
+@media screen and (max-width: 743px) {
+    .container {
+        padding: 30px;
+    }
+}

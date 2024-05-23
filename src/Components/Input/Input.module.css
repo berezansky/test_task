@@ -44,3 +44,9 @@
 .errorInput {
     border-color: var(--color-error);
 }
+
+@media screen and (max-width: 743px) {
+    .input {
+        background-color: var(--color-dark-gray);
+    }
+}

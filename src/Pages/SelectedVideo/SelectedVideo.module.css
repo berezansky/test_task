@@ -47,3 +47,24 @@
         max-width: 647px;
     }
 }
+
+@media screen and (max-width: 743px) {
+    .container {
+        padding: 24px;
+        box-sizing: border-box;
+    }
+    .title, .addCommentTitle {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .addCommentTitle {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 0;
+    }
+    .addCommentSubtitle {
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 30px;
+    }
+}

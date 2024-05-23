@@ -83,3 +83,15 @@
         gap: 37px;
     }
 }
+
+@media screen and (max-width: 743px) {
+    .wrapper {
+        padding: 0;
+        gap: 20px;
+        background-color: transparent;
+        flex-direction: column;
+    }
+    .buttons button {
+        background-color: var(--color-dark-gray) !important;
+    }
+}

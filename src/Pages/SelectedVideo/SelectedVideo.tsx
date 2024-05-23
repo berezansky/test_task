@@ -21,8 +21,6 @@ export const SelectedVideoPage = (): React.JSX.Element => {
         }
     }, [])
 
-    console.log(comments)
-
     return (
         <div className={styles.container}>
             <div>
