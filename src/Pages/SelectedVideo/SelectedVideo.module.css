@@ -10,6 +10,10 @@
     gap: 40px;
 }
 
+.container div:first-child {
+    max-width: 1000px;
+}
+
 .title {
     font-size: 36px;
     line-height: 36px;
@@ -18,4 +22,28 @@
     color: var(--color-white);
     margin-bottom: 32px;
     margin-top: 90px;
+}
+
+.addCommentTitle {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 40px;
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin-top: 105px;
+    margin-bottom: 38px;
+}
+
+.addCommentSubtitle {
+    font-size: 24px;
+    line-height: 26px;
+    color: var(--color-white);
+    margin-bottom: 48px;
+}
+
+
+@media screen and (max-width: 1439px) {
+    .container div:first-child {
+        max-width: 647px;
+    }
 }

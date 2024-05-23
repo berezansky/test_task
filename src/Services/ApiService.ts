@@ -32,7 +32,14 @@ class ApiService {
     }
 
     public sendComment = async (id: string) => {
-        const video = await axios.post(`/comments/post/${id}`, { baseURL: this.baseUrl })
+        const video = await axios.post(`/comments/post/${id}`, {}, {
+            baseURL: this.baseUrl,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+        })
 
         return video.data
     }

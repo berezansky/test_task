@@ -8,7 +8,6 @@ import { Slider } from '../Slider';
 
 import styles from './OurVideos.module.css';
 import { Text } from '@/Components';
-import { TextType } from '@/Consts';
 
 export const OurVideos = (): React.JSX.Element | null => {
     const [videos, setVideos] = useState<Video[]>([]);
@@ -27,7 +26,6 @@ export const OurVideos = (): React.JSX.Element | null => {
         <div>
             <Text 
                 tag="h1" 
-                type={TextType.TITLE} 
                 className={styles.title} 
                 text="Наши видео" />
             <div className={styles.ourVideosWrapper}>

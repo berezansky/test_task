@@ -1,29 +1,33 @@
 import React, { FC } from 'react'
-import { TextType } from '@/Consts';
 
 import { Text } from '../Text';
 
 import styles from './Button.module.css';
+import { SVG_ICONS } from '@/Consts/SvgIcons';
 
 interface ButtonProps {
     color: string;
     text?: string;
-    textType: string;
     description?: string;
     className?: string;
+    iconName?: string;
+    error?: boolean;
     onClick: () => void;
 }
 
 export const Button: FC<ButtonProps> = (props): React.JSX.Element => {
-    const { color, text, description, textType, className, onClick } = props;
+    const { color, text, description, className, iconName, error, onClick } = props;
 
     return (
         <button
-            className={`${styles.button}${className ? ` ${className}` : ''}`}
             style={{ backgroundColor: color }}
+            className={`${styles.button}${className ? ` ${className}` : ''}${error ? ` ${styles.error}` : ''}`}
             onClick={onClick}>
-            {text && <Text tag='p' type={textType} text={text} />}
-            {description && <Text tag='span' type={TextType.BUTTON_DESCRIPTION} text={description} />}
+            <div className={styles.textWithIcon}>
+                {iconName && SVG_ICONS[iconName]}
+                {text && <Text tag='p' text={text} />}
+            </div>
+            {description && <Text tag='span' text={description} />}
         </button>
     )
 }

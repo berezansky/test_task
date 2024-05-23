@@ -1,7 +1,5 @@
 import React, { FC } from 'react'
 
-import { TextType } from '@/Consts';
-
 import { Image } from '../Image';
 import { Text } from '../Text';
 
@@ -24,12 +22,12 @@ export const Video: FC<VideoProps> = ({ id, imageSource, description, title, sub
     <div className={styles.video}>
         <Image source={imageSource} />
         <div className={styles.videoDescription}>
-            <Text tag='p' text={description} type={TextType.VIDEO_DESCRIPTION} />
-            <Button color='var(--color-dark-gray)' textType={TextType.BUTTON} onClick={() => navigate(`/${id}`)} text='Смотреть' />
+            <Text tag='p' text={description} />
+            <Button color='var(--color-dark-gray)' onClick={() => navigate(`/${id}`)} text='Смотреть' />
         </div>
         <div className={styles.videoInfo}>
-            <Text tag='p' text={title} type={TextType.VIDEO_NAME} />
-            <Text tag='p' text={subtitle} type={TextType.VIDEO_NAME} />
+            <Text tag='p' text={title} />
+            <Text tag='p' text={subtitle} />
         </div>
     </div>
     )

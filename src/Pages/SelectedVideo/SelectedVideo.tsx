@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 
 import { Text } from '@/Components';
-import { TextType } from '@/Consts';
-import { BannerBlock, Comment, VideoWithName } from '@/Widgets';
+import { AddComment, BannerBlock, Comment, VideoWithName } from '@/Widgets';
 import { apiService } from '@/Services';
 
 import styles from './SelectedVideo.module.css';
@@ -22,18 +21,21 @@ export const SelectedVideoPage = (): React.JSX.Element => {
         }
     }, [])
 
+    console.log(comments)
+
     return (
         <div className={styles.container}>
             <div>
-                <Text tag="h1" text="Выбранное видео" type={TextType.TITLE} className={styles.title} />
+                <Text tag="h1" text="Выбранное видео" className={styles.title} />
                 <VideoWithName video={video} />
                 {comments.map(comment => (
-                    <Comment />
+                    <Comment comment={comment} />
                 ))}
-                <Text tag="h2" text="Оставьте комментарий" type={TextType.TITLE} />
-                <Text tag="p" text="Что вы думаете об этом видео?" type={TextType.LABEL} />
+                <Text tag="h2" text="Оставьте комментарий" className={styles.addCommentTitle} />
+                <Text tag="p" text="Что вы думаете об этом видео?" className={styles.addCommentSubtitle} />
+                <AddComment />
             </div>
-            <BannerBlock />
+            <BannerBlock showOnSmallScreen />
         </div>
     );
 }

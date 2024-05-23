@@ -1,0 +1,36 @@
+.container {
+    border-radius: 15px;
+    padding: 41px 44px;
+    margin-top: 80px;
+    background-color: var(--color-dark-gray);
+}
+
+.authorWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 27px;
+    margin-bottom: 28px;
+}
+
+.authorInfo p:first-child {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--color-white);
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.authorInfo p:last-child {
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--color-gray);
+    text-transform: lowercase;
+}
+
+.comment {
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--color-white);
+}

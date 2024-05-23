@@ -1,0 +1,46 @@
+.container {
+    margin-bottom: 38px;
+}
+
+.label {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 14px;
+    color: var(--color-white);
+}
+
+.label.error {
+    color: var(--color-error);
+}
+
+.label span {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 14px;
+    color: var(--color-error);
+}
+
+.input {
+    border: 1px solid var(--color-dark);
+    border-radius: 60px;
+    box-sizing: border-box;
+    background-color: var(--color-dark);
+    width: 100%;
+    padding: 17px 15px;
+
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--color-white);
+}
+
+.errorText {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 6px;
+    text-align: right;
+    color: var(--color-error);
+}
+
+.errorInput {
+    border-color: var(--color-error);
+}

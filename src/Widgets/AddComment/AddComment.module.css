@@ -1,0 +1,10 @@
+.container {
+    border-radius: 15px;
+    padding: 33px 29px 57px;
+    background-color: var(--color-dark-gray);
+    margin-bottom: 100px;
+}
+
+.send {
+    width: 300px;
+}
